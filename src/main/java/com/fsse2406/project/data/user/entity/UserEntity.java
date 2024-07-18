@@ -1,7 +1,10 @@
 package com.fsse2406.project.data.user.entity;
 
+import com.fsse2406.project.data.cart.entity.CartItemEntity;
 import com.fsse2406.project.data.user.domainObject.FirebaseUserData;
 import jakarta.persistence.*;
+
+import java.util.List;
 
 
 @Entity
@@ -16,6 +19,9 @@ public class UserEntity {
 
     @Column(unique = true,nullable = false)
     private String email;
+
+    @OneToMany(mappedBy = "user")
+    private List<CartItemEntity> cartItems;
 
     public UserEntity() {
     }

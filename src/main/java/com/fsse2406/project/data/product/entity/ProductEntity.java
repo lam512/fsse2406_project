@@ -1,8 +1,10 @@
 package com.fsse2406.project.data.product.entity;
 
+import com.fsse2406.project.data.cart.entity.CartItemEntity;
 import jakarta.persistence.*;
 
 import java.math.BigDecimal;
+import java.util.List;
 
 
 @Entity
@@ -24,6 +26,9 @@ public class ProductEntity {
 
     @Column(nullable = false)
     private int stock;
+
+    @OneToMany (mappedBy = "product")
+    private List<CartItemEntity> cartItem;
 
 
     public ProductEntity() {

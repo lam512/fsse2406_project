@@ -8,9 +8,8 @@ public class CartItemResponseData {
     private Integer quantity;
 
     public CartItemResponseData(CartItemEntity entity){
-        this.pid = entity.getPid();
-        this.quantity = entity.getQuantity();
 
+        this.quantity = entity.getQuantity();
     }
 
     public Integer getUid() {
