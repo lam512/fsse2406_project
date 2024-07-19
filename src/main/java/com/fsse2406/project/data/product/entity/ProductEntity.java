@@ -27,8 +27,8 @@ public class ProductEntity {
     @Column(nullable = false)
     private int stock;
 
-    @OneToMany (mappedBy = "product")
-    private List<CartItemEntity> cartItem;
+//    @OneToMany (mappedBy = "product")
+//    private List<CartItemEntity> cartItem;
 
 
     public ProductEntity() {
