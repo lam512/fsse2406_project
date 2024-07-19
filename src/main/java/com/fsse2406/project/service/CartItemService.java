@@ -7,6 +7,7 @@ import com.fsse2406.project.data.user.domainObject.FirebaseUserData;
 import java.util.List;
 
 public interface CartItemService {
-    List<CartItemResponseData> addItemToCart(Integer pid, Integer quantity, FirebaseUserData firebaseUserData);
+    boolean addItemToCart(Integer pid, Integer quantity, FirebaseUserData firebaseUserData);
 
+    List<CartItemResponseData> getUserCartItems(FirebaseUserData firebaseUserData);
 }
